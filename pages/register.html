@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account</title>
+<link rel="stylesheet" href="../css/register.css">
+
+
+<script defer src="../js/confirm.js"></script>
+</head>
+<body>
+
+ 
+
+<header class="navbar">
+  <div class="logo">SmartSupport</div>
+  <nav>
+    <ul>
+      <li><a class="active" href="../index.html">Home</a></li>
+      <li><a href="../pages/scholarship.html">Scholarships</a></li>
+      <li><a href="../pages/register.html">Register</a></li>
+      <li><a href="../pages/login.html">Login</a></li>
+    </ul>
+  </nav>
+</header> <!-- shared header -->
+
+<div class="auth-container">
+  <form id="registerForm" class="auth-box">
+    <h2>Create Account</h2>
+    
+    <div class="inputBox">
+      <label>Full Name</label>
+      <input type="text" id="name" required>
+    </div>
+
+    <div class="inputBox">
+      <label>Email</label>
+      <input type="email" id="email" required>
+    </div>
+
+    <div class="inputBox">
+      <label>Password</label>
+      <input type="password" id="pass" required>
+    </div>
+
+    <div class="inputBox">
+      <label>Confirm Password</label>
+      <input type="password" id="cpass" required>
+      <span id="matchText" class="match-text"></span>
+    </div>
+
+    <button type="submit" class="btn-auth">Register</button>
+
+    <p class="alt">Already have an account? <a href="./login.html">Login</a></p>
+  </form>
+</div>
+
+<div id="footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Apply Scholarship</title>
+  <link rel="stylesheet" href="../css/apply.css">
+</head>
+
+<body>
+<header class="navbar">
+  <div class="logo">SmartSupport</div>
+  <nav>
+    <ul>
+      <li><a class="active" href="../index.html">Home</a></li>
+      <li><a href="../pages/scholarship.html">Scholarships</a></li>
+      <li><a href="../pages/register.html">Register</a></li>
+      <li><a href="../pages/login.html">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+  
+
+  <div class="form-container">
+    <h3>Scholarship Application Form</h3>
+
+    <form id="scholarshipForm">
+
+      <!-- PERSONAL DETAILS -->
+      <div class="section">
+        <h4>Personal Details</h4>
+
+        <input type="text" id="fullName" placeholder="Full Name" required>
+
+        <select id="gender" required>
+          <option value="">Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+
+        <input type="date" id="dob" required>
+
+        <input type="text" id="aadhar" placeholder="Aadhar Number" required>
+
+        <select id="category" required>
+          <option value="">Select Category</option>
+          <option>SC</option>
+          <option>ST</option>
+          <option>OBC</option>
+          <option>VJNT</option>
+          <option>General</option>
+          <option>Minority</option>
+        </select>
+      </div>
+
+      <!-- EDUCATION DETAILS -->
+      <div class="section">
+        <h4>Education Details</h4>
+
+        <select id="course" required>
+          <option value="">Select Course</option>
+          <option>FY BSc</option>
+          <option>SY BSc</option>
+          <option>TY BSc</option>
+          <option>BCA</option>
+          <option>MCA</option>
+          <option>Engineering</option>
+        </select>
+
+        <select id="year" required>
+          <option value="">Academic Year</option>
+          <option>2023</option>
+          <option>2024</option>
+          <option>2025</option>
+        </select>
+
+        <input type="text" id="college" placeholder="College Name" required>
+
+        <select id="income" required>
+          <option value="">Annual Family Income</option>
+          <option>Below 1,00,000</option>
+          <option>1,00,000 - 2,50,000</option>
+          <option>2,50,000 - 5,00,000</option>
+          <option>Above 5,00,000</option>
+        </select>
+      </div>
+
+      <!-- SCHOLARSHIP DETAILS -->
+      <div class="section">
+        <h4>Scholarship Details</h4>
+
+        <select id="scholarshipName" required>
+          <option value="">Select Scholarship</option>
+          <option>Post Matric Scholarship</option>
+          <option>Rajarshi Shahu Maharaj Scholarship</option>
+          <option>Savitribai Phule Scholarship</option>
+          <option>Merit Cum Means Scholarship</option>
+          <option>Pragati Scholarship</option>
+        </select>
+      </div>
+
+      <!-- BANK DETAILS -->
+      <div class="section">
+        <h4>Bank Details</h4>
+
+        <input type="text" id="account" placeholder="Bank Account Number" required>
+
+        <input type="text" id="ifsc" placeholder="IFSC Code" required>
+      </div>
+
+      <!-- ADDRESS -->
+      <div class="section">
+        <h4>Address</h4>
+        <textarea id="address" placeholder="Permanent Address" required></textarea>
+      </div>
+      <div class="section"></div>
+      <button type="submit">apply
+        <select id="scholarshipName">
+          <option value="">Select Scholarship</option>
+          <option><a href="https://mahaeschol.maharashtra.gov.in/"></a>Post Matric Scholarship</option>
+          <option><a href="https://mahaeschol.maharashtra.gov.in/"></a>Rajarshi Shahu Maharaj Scholarship</option>
+          <option><a href="https://mahaeschol.maharashtra.gov.in/"></a>Savitribai Phule Scholarship</option>
+          <option> <data link="https://www.indiascienceandtechnology.gov.in/nurturing-minds/scholarships/post-graduation/scholarship-top-class-education-students-disabilities"></data>
+            Merit Cum Means Scholarship</option>
+          <option><a href="https://www.scholarships.gov.in/"></a>Pragati Scholarship</option>
+        </select>
+  </div>
+  </button>
+
+  </form>
+  </div>
+
+  <footer class="footer">
+    © 2025 Smart Scholarship System
+  </footer>
+
+  <script src="../js/apply.js"></script>
+</body>
+
+</html>

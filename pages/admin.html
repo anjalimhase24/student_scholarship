@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">SmartSupport</div>
+  <nav>
+    <ul>
+      <li><a class="active" href="../index.html">Home</a></li>
+      <li><a href="../pages/scholarship.html">Scholarships</a></li>
+      <li><a href="../pages/register.html">Register</a></li>
+      <li><a href="../pages/login.html">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<section class="controls">
+  <select id="filterStatus" onchange="filterData()">
+    <option value="All">All</option>
+    <option value="Pending">Pending</option>
+    <option value="Approved">Approved</option>
+    <option value="Rejected">Rejected</option>
+  </select>
+</section>
+
+<section class="table-section">
+  <table>
+    <thead>
+      <tr>
+        <th>Sr</th>
+        <th>Student Name</th>
+        <th>Email</th>
+        <th>Scholarship</th>
+        <th>Year</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="adminTable">
+      <!-- JS data -->
+    </tbody>
+  </table>
+</section>
+
+<footer class="footer">
+© 2025 Smart Scholarship System | Admin
+</footer>
+
+<script src="../js/admin.js"></script>
+</body>
+</html>

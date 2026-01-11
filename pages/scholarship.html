@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scholarships - Smart Student Support</title>
+<link rel="stylesheet" href="../css/scholarship.css">
+<script defer src="../js/scholarship.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">Smart Student Support</div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/scholarship.html" class="active">Scholarships</a></li>
+      <li><a href="../pages/register.html">Register</a></li>
+      <li><a href="../pages/login.html">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Maharashtra Scholarships</h1>
+  <p>Apply and get financial support for your education</p>
+</section>
+
+<section class="scholarship-cards">
+  <div class="card">
+    <h3>Pragati Scholarship</h3>
+    <button class="btn apply-btn"
+      data-title="Pragati Scholarship"
+      data-el="Girl students (Diploma / Degree)"
+      data-ben="Fees + books + equipment support"
+      data-link="https://www.aicte.gov.in/schemes/students-development-schemes/Pragati/General-Instructions">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <h3>Saksham Scholarship</h3>
+    <button class="btn apply-btn"
+      data-title="Saksham Scholarship"
+      data-el="Special‑abled students"
+      data-ben="₹50,000 per year support"
+      data-link="https://www.aicte.gov.in/schemes/students-development-schemes/Saksham/General-Instructions">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <h3>Minority Scholarship</h3>
+    <button class="btn apply-btn"
+      data-title="Minority Scholarship"
+      data-el="Minority community students"
+      data-ben="Tuition & exam fee coverage"
+      data-link="https://www.indiascienceandtechnology.gov.in/nurturing-minds/scholarships/school/post-matric-scholarship-scheme-minorities">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <h3>National PG Scholarship</h3>
+    <button class="btn apply-btn"
+      data-title="National PG Scholarship"
+      data-el="Postgraduate students"
+      data-ben="₹1,50,000 per year"
+      data-link="https://scholarships.gov.in/ApplicationForm/login">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <h3>Top Class Education (Disability)</h3>
+    <button class="btn apply-btn"
+      data-title="Top Class Education (Disability)"
+      data-el="Disabled students"
+      data-ben="Fee + maintenance support"
+      data-link="https://www.indiascienceandtechnology.gov.in/nurturing-minds/scholarships/post-graduation/scholarship-top-class-education-students-disabilities">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <h3>Rajarshi Shahu Maharaj Foreign Scholarship</h3>
+    <button class="btn apply-btn"
+      data-title="Rajarshi Shahu Maharaj Foreign Scholarship"
+      data-el="SC / Neo‑Buddhist students"
+      data-ben="Tuition fees covered for abroad study"
+      ata-link="https://sjsa.maharashtra.gov.in/en/notice/rajarshi-shahu-maharaj-foreign-scholarship-scheme-for-scheduled-caste-boys-and-girls-for-special-studies-abroad-2025-26/">Apply Now</button>
+  </div>
+
+</section>
+
+<!-- Modal -->
+<div id="scholarshipModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p><strong>Eligibility:</strong> <span id="modalEl"></span></p>
+    <p><strong>Benefits:</strong> <span id="modalBen"></span></p>
+    <a href="./apply.html" id="modalLink" target="_blank" class="btn">Proceed to Apply</a>
+  </div>
+</div>
+<footer>
+  © 2025 Smart Student Support — Maharashtra Scholarships Portal
+</footer>
+
+</body>
+</html>
