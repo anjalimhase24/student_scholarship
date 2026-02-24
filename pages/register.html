@@ -3,16 +3,100 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Create Account</title>
-<link rel="stylesheet" href="../css/register.css">
+<title>Create Account - SmartSupport</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+}
+
+.navbar {
+  background: #111;
+  color: #fff;
+  padding: 18px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #ffd700;
+}
 
 
-<script defer src="../js/confirm.js"></script>
+.auth-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.auth-box {
+  background: white;
+  width: 400px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.auth-box h2 {
+  text-align: center;
+}
+
+.inputBox {
+  margin: 15px 0;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btn-auth {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #111;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-auth:hover {
+  background: #333;
+}
+
+.match-text {
+  font-size: 14px;
+}
+</style>
 </head>
 <body>
-
- 
-
 <header class="navbar">
   <div class="logo">SmartSupport</div>
   <nav>
@@ -23,7 +107,7 @@
       <li><a href="../pages/login.html">Login</a></li>
     </ul>
   </nav>
-</header> <!-- shared header -->
+</header>
 
 <div class="auth-container">
   <form id="registerForm" class="auth-box">
@@ -52,11 +136,62 @@
 
     <button type="submit" class="btn-auth">Register</button>
 
-    <p class="alt">Already have an account? <a href="./login.html">Login</a></p>
+    <p>Already have an account? <a href="login.html">Login</a></p>
   </form>
 </div>
 
-<div id="footer"></div>
+<script>
+// Password Match Check
+const pass = document.getElementById("pass");
+const cpass = document.getElementById("cpass");
+const matchText = document.getElementById("matchText");
+
+cpass.addEventListener("keyup", function() {
+  if (pass.value === cpass.value) {
+    matchText.style.color = "green";
+    matchText.textContent = "Password Matched ✔";
+  } else {
+    matchText.style.color = "red";
+    matchText.textContent = "Password Not Matched ❌";
+  }
+});
+
+// Register System with JS Database (LocalStorage)
+document.getElementById("registerForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = pass.value;
+  const confirmPassword = cpass.value;
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return;
+  }
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+
+  const userExists = users.find(user => user.email === email);
+
+  if (userExists) {
+    alert("User already registered!");
+    return;
+  }
+
+  const newUser = {
+    name: name,
+    email: email,
+    password: password
+  };
+
+  users.push(newUser);
+  localStorage.setItem("users", JSON.stringify(users));
+
+  alert("Registration Successful 🎉");
+  window.location.href = "login.html";
+});
+</script>
 
 </body>
 </html>

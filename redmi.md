@@ -58,7 +58,7 @@ student-scholarship-website/
 ├── css/
 │   └── style.css
 └── README.md
-## ▶️ How to Run the Project
+ ## ▶️ How to Run the Project
 
 Download or clone the repository
 
@@ -79,7 +79,7 @@ Make the website fully responsive
 Add login/signup functionality
 
 ## 👩‍💻 Developed By
-
+[Anjali Mhase !(https://avatars.githubusercontent.com/u/236130962?v=4)]
 Name: Anjali Mhase
 Course: B.Sc. Computer Science
 Semester: TY / SY (as applicable)

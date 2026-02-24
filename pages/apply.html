@@ -1,18 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Apply Scholarship</title>
-  <link rel="stylesheet" href="../css/apply.css">
+<meta charset="UTF-8">
+<title>Apply Scholarship - SmartSupport</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+}
+
+.navbar {
+  background: #111;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-container {
+  width: 90%;
+  max-width: 750px;
+  background: white;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h3 {
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+}
+
+.footer {
+  text-align: center;
+  background: #111;
+  color: white;
+  padding: 12px;
+  margin-top: 20px;
+}
+</style>
 </head>
 
 <body>
+
 <header class="navbar">
   <div class="logo">SmartSupport</div>
   <nav>
     <ul>
-      <li><a class="active" href="../index.html">Home</a></li>
+      <li><a href="../index.html">Home</a></li>
       <li><a href="../pages/scholarship.html">Scholarships</a></li>
       <li><a href="../pages/register.html">Register</a></li>
       <li><a href="../pages/login.html">Login</a></li>
@@ -20,123 +108,150 @@
   </nav>
 </header>
 
-  
+<div class="form-container">
+  <h3>Scholarship Application Form</h3>
 
-  <div class="form-container">
-    <h3>Scholarship Application Form</h3>
+  <form id="scholarshipForm">
 
-    <form id="scholarshipForm">
+    <!-- PERSONAL DETAILS -->
+    <div class="section">
+      <h4>Personal Details</h4>
+      <input type="text" id="fullName" placeholder="Full Name" required>
+      
+      <select id="gender" required>
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
 
-      <!-- PERSONAL DETAILS -->
-      <div class="section">
-        <h4>Personal Details</h4>
+      <input type="date" id="dob" required>
+      <input type="text" id="aadhar" placeholder="Aadhar Number" required>
 
-        <input type="text" id="fullName" placeholder="Full Name" required>
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option>SC</option>
+        <option>ST</option>
+        <option>OBC</option>
+        <option>VJNT</option>
+        <option>General</option>
+        <option>Minority</option>
+      </select>
+    </div>
 
-        <select id="gender" required>
-          <option value="">Select Gender</option>
-          <option>Male</option>
-          <option>Female</option>
-          <option>Other</option>
-        </select>
+    <!-- EDUCATION DETAILS -->
+    <div class="section">
+      <h4>Education Details</h4>
 
-        <input type="date" id="dob" required>
+      <select id="course" required>
+        <option value="">Select Course</option>
+        <option>FY BSc</option>
+        <option>SY BSc</option>
+        <option>TY BSc</option>
+        <option>BCA</option>
+        <option>MCA</option>
+        <option>Engineering</option>
+      </select>
 
-        <input type="text" id="aadhar" placeholder="Aadhar Number" required>
+      <select id="year" required>
+        <option value="">Academic Year</option>
+        <option>2023</option>
+        <option>2024</option>
+        <option>2025</option>
+      </select>
 
-        <select id="category" required>
-          <option value="">Select Category</option>
-          <option>SC</option>
-          <option>ST</option>
-          <option>OBC</option>
-          <option>VJNT</option>
-          <option>General</option>
-          <option>Minority</option>
-        </select>
-      </div>
+      <input type="text" id="college" placeholder="College Name" required>
 
-      <!-- EDUCATION DETAILS -->
-      <div class="section">
-        <h4>Education Details</h4>
+      <select id="income" required>
+        <option value="">Annual Family Income</option>
+        <option>Below 1,00,000</option>
+        <option>1,00,000 - 2,50,000</option>
+        <option>2,50,000 - 5,00,000</option>
+        <option>Above 5,00,000</option>
+      </select>
+    </div>
 
-        <select id="course" required>
-          <option value="">Select Course</option>
-          <option>FY BSc</option>
-          <option>SY BSc</option>
-          <option>TY BSc</option>
-          <option>BCA</option>
-          <option>MCA</option>
-          <option>Engineering</option>
-        </select>
+    <!-- SCHOLARSHIP DETAILS -->
+    <div class="section">
+      <h4>Scholarship Details</h4>
+      <select id="scholarshipName" required>
+        <option value="">Select Scholarship</option>
+        <option>Post Matric Scholarship</option>
+        <option>Rajarshi Shahu Maharaj Scholarship</option>
+        <option>Savitribai Phule Scholarship</option>
+        <option>Merit Cum Means Scholarship</option>
+        <option>Pragati Scholarship</option>
+      </select>
+    </div>
 
-        <select id="year" required>
-          <option value="">Academic Year</option>
-          <option>2023</option>
-          <option>2024</option>
-          <option>2025</option>
-        </select>
+    <!-- BANK DETAILS -->
+    <div class="section">
+      <h4>Bank Details</h4>
+      <input type="text" id="account" placeholder="Bank Account Number" required>
+      <input type="text" id="ifsc" placeholder="IFSC Code" required>
+    </div>
 
-        <input type="text" id="college" placeholder="College Name" required>
+    <!-- ADDRESS -->
+    <div class="section">
+      <h4>Address</h4>
+      <textarea id="address" placeholder="Permanent Address" required></textarea>
+    </div>
 
-        <select id="income" required>
-          <option value="">Annual Family Income</option>
-          <option>Below 1,00,000</option>
-          <option>1,00,000 - 2,50,000</option>
-          <option>2,50,000 - 5,00,000</option>
-          <option>Above 5,00,000</option>
-        </select>
-      </div>
-
-      <!-- SCHOLARSHIP DETAILS -->
-      <div class="section">
-        <h4>Scholarship Details</h4>
-
-        <select id="scholarshipName" required>
-          <option value="">Select Scholarship</option>
-          <option>Post Matric Scholarship</option>
-          <option>Rajarshi Shahu Maharaj Scholarship</option>
-          <option>Savitribai Phule Scholarship</option>
-          <option>Merit Cum Means Scholarship</option>
-          <option>Pragati Scholarship</option>
-        </select>
-      </div>
-
-      <!-- BANK DETAILS -->
-      <div class="section">
-        <h4>Bank Details</h4>
-
-        <input type="text" id="account" placeholder="Bank Account Number" required>
-
-        <input type="text" id="ifsc" placeholder="IFSC Code" required>
-      </div>
-
-      <!-- ADDRESS -->
-      <div class="section">
-        <h4>Address</h4>
-        <textarea id="address" placeholder="Permanent Address" required></textarea>
-      </div>
-      <div class="section"></div>
-      <button type="submit">apply
-        <select id="scholarshipName">
-          <option value="">Select Scholarship</option>
-          <option><a href="https://mahaeschol.maharashtra.gov.in/"></a>Post Matric Scholarship</option>
-          <option><a href="https://mahaeschol.maharashtra.gov.in/"></a>Rajarshi Shahu Maharaj Scholarship</option>
-          <option><a href="https://mahaeschol.maharashtra.gov.in/"></a>Savitribai Phule Scholarship</option>
-          <option> <data link="https://www.indiascienceandtechnology.gov.in/nurturing-minds/scholarships/post-graduation/scholarship-top-class-education-students-disabilities"></data>
-            Merit Cum Means Scholarship</option>
-          <option><a href="https://www.scholarships.gov.in/"></a>Pragati Scholarship</option>
-        </select>
-  </div>
-  </button>
-
+    <button type="submit">Apply Scholarship</button>
   </form>
-  </div>
+</div>
 
-  <footer class="footer">
-    © 2025 Smart Scholarship System
-  </footer>
+<footer class="footer">
+  © 2025 Smart Scholarship System
+</footer>
 
-  <script src="../js/apply.js"></script>
+<script>
+  // 🔒 Check if user is logged in
+const currentUser = localStorage.getItem("currentUser");
+
+if (!currentUser) {
+  alert("Please login first to apply for scholarship!");
+  window.location.href = "../pages/login.html";
+}
+// JS Database Save using LocalStorage
+document.getElementById("scholarshipForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  // Get form data
+  const application = {
+    applicationId: "APP" + Date.now(),
+    fullName: document.getElementById("fullName").value,
+    gender: document.getElementById("gender").value,
+    dob: document.getElementById("dob").value,
+    aadhar: document.getElementById("aadhar").value,
+    category: document.getElementById("category").value,
+    course: document.getElementById("course").value,
+    year: document.getElementById("year").value,
+    college: document.getElementById("college").value,
+    income: document.getElementById("income").value,
+    scholarshipName: document.getElementById("scholarshipName").value,
+    account: document.getElementById("account").value,
+    ifsc: document.getElementById("ifsc").value,
+    address: document.getElementById("address").value,
+    appliedDate: new Date().toLocaleString()
+  };
+
+  // Get existing data (Database)
+  let applications = JSON.parse(localStorage.getItem("scholarshipApplications")) || [];
+
+  // Save new application
+  applications.push(application);
+
+  // Store in JS Database
+  localStorage.setItem("scholarshipApplications", JSON.stringify(applications));
+
+  // Success message
+  alert("Application Submitted Successfully 🎉\nApplication ID: " + application.applicationId);
+
+  // Reset form
+  document.getElementById("scholarshipForm").reset();
+});
+</script>
+
 </body>
-
 </html>
